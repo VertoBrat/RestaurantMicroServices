@@ -9,6 +9,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class ItemTo {
 
+    private Long id;
     private String name;
     private Double price;
 }
