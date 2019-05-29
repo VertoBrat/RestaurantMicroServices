@@ -20,4 +20,23 @@ public class ItemService {
     public List<ItemTo> getAll() {
         return mapper.toToList(repository.findAll());
     }
+
+    public List<ItemTo> getAllEnabled() {
+        return mapper.toToList(repository.getAllEnabled());
+    }
+
+    @Transactional
+    public ItemTo createOrUpdate(ItemTo to) {
+        return mapper.toTo(repository.save(mapper.toEntity(to)));
+    }
+
+    @Transactional
+    public void setEnabled(Long id, boolean enabled) {
+        repository.setEnabled(enabled, id);
+    }
+
+    @Transactional
+    public void delete(long id) {
+        repository.deleteById(id);
+    }
 }
