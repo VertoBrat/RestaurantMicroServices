@@ -10,7 +10,7 @@ import ru.vertobrat.cashbox.to.ItemTo;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/items")
+@RequestMapping("/v1/items")
 @AllArgsConstructor
 public class ItemController {
 
