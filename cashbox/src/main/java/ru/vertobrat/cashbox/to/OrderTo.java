@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.Collection;
 
 @Getter
@@ -12,6 +14,9 @@ import java.util.Collection;
 public class OrderTo {
 
     private Long id;
+    @NotNull
+    @NotBlank
     private String operator;
+    @NotNull
     private Collection<ItemTo> items;
 }

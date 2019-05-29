@@ -36,7 +36,7 @@ public class ItemService {
     }
 
     @Transactional
-    public void delete(long id) {
+    public void delete(Long id) {
         repository.deleteById(id);
     }
 }
