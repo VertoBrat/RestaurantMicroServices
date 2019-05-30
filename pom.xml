@@ -21,6 +21,8 @@
     <modules>
         <module>eurekaserver</module>
         <module>configserver</module>
+        <module>cashbox</module>
+        <module>zuulservice</module>
     </modules>
 
 </project>
