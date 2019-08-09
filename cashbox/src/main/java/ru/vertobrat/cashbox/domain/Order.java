@@ -12,11 +12,7 @@ import java.util.Collection;
 @Getter
 @Setter
 @Table(name = "orders")
-public class Order {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Order extends BaseEntity {
 
     @Column(name = "operator")
     private String operator;
