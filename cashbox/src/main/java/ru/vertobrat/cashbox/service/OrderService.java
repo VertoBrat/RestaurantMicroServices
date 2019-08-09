@@ -22,7 +22,13 @@ public class OrderService {
     @Transactional
     public OrderTo create(OrderTo to) {
         Order order = mapper.toEntity(to);
+        order.setEnable(true);
         return mapper.toTo(repository.save(order));
+    }
+
+    public List<OrderTo> getAllEnabled() {
+        List<Order> orders = repository.getAllEnabled();
+        return mapper.toToList(orders);
     }
 
     public List<OrderTo> getAll() {

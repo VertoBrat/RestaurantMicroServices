@@ -25,5 +25,7 @@ public class Order extends BaseEntity {
     @NotNull
     private Collection<Item> items = new ArrayList<>();
 
+    private boolean enable;
+
 
 }

@@ -23,6 +23,11 @@ public class OrderController {
         return service.getAll();
     }
 
+    @GetMapping("/enabled")
+    public List<OrderTo> getAllEnabled() {
+        return service.getAllEnabled();
+    }
+
     @GetMapping("/{id}")
     public OrderTo getById(@PathVariable("id") Long id) {
         return service.getById(id);

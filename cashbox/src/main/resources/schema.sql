@@ -17,7 +17,8 @@ create table orders
   id     serial  not null
     constraint orders_pk
       primary key,
-  operator VARCHAR(255) not null
+  operator VARCHAR(255) not null,
+  enable boolean default true
 );
 
 create table items_orders
